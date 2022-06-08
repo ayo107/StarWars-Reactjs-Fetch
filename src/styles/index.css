@@ -1,3 +1,68 @@
 /* 
     General Styles
 */
+.scrolling-wrapper-flexbox {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+    .cardscroll {
+      flex: 0 0 auto;
+    }
+  
+  
+  .personajes {
+      color: rgb(238, 255, 0)
+  }
+  
+  .bg-negro{
+      background-color: rgb(26, 26, 26);
+  }
+  
+  .scrolling-wrapper-flexbox::-webkit-scrollbar {
+      -webkit-appearance: none;
+  }
+  
+  .scrolling-wrapper-flexbox::-webkit-scrollbar:vertical {
+      width:10px;
+  }
+  
+  .scrolling-wrapper-flexbox::-webkit-scrollbar-button:increment,.scrolling-wrapper-flexbox::-webkit-scrollbar-button {
+      display: none;
+  } 
+  
+  .scrolling-wrapper-flexbox::-webkit-scrollbar:horizontal {
+      height: 15px;
+  }
+  
+  .scrolling-wrapper-flexbox::-webkit-scrollbar-thumb {
+      background-color: #c9c9c9;
+      border-radius: 20px;
+      border: 2px solid #000000;
+  }
+  
+  .scrolling-wrapper-flexbox::-webkit-scrollbar-track {
+      border-radius: 10px;  
+  }
+  
+  .parrafo {
+      font-size: 25px;
+  }
+  
+  .favoritos {
+      width: 40px;
+  }
+  /*Extras*/
+  @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+.size{
+    width: 15rem;
+}
+body{
+    background-image: url('https://cdn.pixabay.com/photo/2016/01/27/15/25/space-1164579_1280.png');
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    color:rgb(218, 196, 0);
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.15rem;
+}

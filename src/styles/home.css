@@ -1,0 +1,12 @@
+.footerIcon{
+    height: 2rem;
+}
+body {
+    background-image: url('https://cdn.pixabay.com/photo/2016/01/27/15/25/space-1164579_1280.png');
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    color:rgb(218, 196, 0);
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.15rem;
+}

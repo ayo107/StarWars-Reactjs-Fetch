@@ -1,12 +1,17 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
-
+import { Todoplaneta } from "./views/todoPlaneta.jsx";
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
+import { Personajes } from "./views/personajes";
+import { Planetas } from "./views/planetas";
+import {Todopersonaje} from "./views/todoPersonaje.jsx";
+import {TodoNaves} from "./views/todoNaves.jsx";
+import {Naves} from "./views/naves";
 import injectContext from "./store/appContext";
-
+import {Notfound} from "./component/NotFound.jsx";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
@@ -17,24 +22,52 @@ const Layout = () => {
 	const basename = process.env.BASENAME || "";
 
 	return (
-		<div>
+		<div className="d-flex flex-column">
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
 					<Navbar />
-					<Switch>
-						<Route exact path="/">
-							<Home />
+					<Routes>
+						<Route exact path="/"
+						element={<Home />}>
+					
 						</Route>
-						<Route exact path="/demo">
-							<Demo />
+						<Route exact path="/demo"
+						element={<Demo />}>
+						
 						</Route>
-						<Route exact path="/single/:theid">
-							<Single />
+						<Route exact path="/personajes/:uid"
+						element={<Personajes />}>
 						</Route>
-						<Route>
-							<h1>Not found!</h1>
+							<Route exact path="/todopersonaje"
+						element={<Todopersonaje />}>
+
 						</Route>
-					</Switch>
+						
+
+						
+						<Route exact path="/planetas/:uid"
+						element={<Planetas />}>
+						</Route>
+							<Route exact path="/todoplaneta"
+						element={<Todoplaneta />}>
+
+						</Route>
+
+						
+						<Route exact path="/naves/:uid"
+						element={<Naves />}>
+
+						</Route>
+						<Route exact path="/todonave"
+						element={<TodoNaves />}>
+
+						</Route>
+						
+						<Route exact path="/notfound"
+						element={<Notfound />}>
+							
+						</Route>
+					</Routes>
 					<Footer />
 				</ScrollToTop>
 			</BrowserRouter>
